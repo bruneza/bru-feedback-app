@@ -1,17 +1,16 @@
 import Header from "./components/Header"
 import ReviewItem from "./components/ReviewItem"
 
-function App(){
-        
+function App() {
+
         return (
                 <>
-                <Header />
-                <ReviewItem />
-                <div className="container">
-                        <h1> BOdy </h1>
-                </div>
+                        <Header />
+                        <div className="container">
+                                <ReviewItem />
+                        </div>
                 </>
-                
+
         )
 }
 
