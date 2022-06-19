@@ -1,5 +1,6 @@
 import Header from "./components/Header"
-import ReviewItem from "./components/ReviewItem"
+import ReviewList from "./components/ReviewList"
+
 
 function App() {
 
@@ -7,7 +8,7 @@ function App() {
                 <>
                         <Header />
                         <div className="container">
-                                <ReviewItem />
+                                <ReviewList />
                         </div>
                 </>
 
