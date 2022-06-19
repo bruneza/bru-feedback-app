@@ -1,0 +1,92 @@
+/*** Margin Zero ***/
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+/*** SASS VARIABLES ***/
+@mixin primary-font {
+  font-weight: 700;
+  font-size: 36px;
+}
+@mixin secondary-font {
+  font-weight: 700;
+  font-size: 24px;
+}
+@mixin body-font {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+  $main-color: #990000;
+  $gray-light:#EFEFEF;
+/*** GENERAL - Presets  ***/
+body{
+    background-color: black;
+    color: white;
+    margin:auto;
+    font-family: poppins, sans-serif;
+}
+h1,h2{
+  @include primary-font;
+}
+.wrapper{
+  padding: 10px;
+}
+
+/*** Review Card ***/
+.review-item{
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  margin-top: 20px;
+  width: 600px;
+  
+}
+.wrapper.rev-content{
+  display: flex;
+  padding: 30px;
+  align-items: center;
+}
+.rev-col-1{
+  flex: 3;
+}
+.rev-col-1 div:not(:last-child){
+  margin-bottom: 10px;
+}
+.rev-name{
+  @include secondary-font;
+  color: $main-color;
+}
+
+.rev-pos-title{
+  font-weight: 700;
+}
+.rev-descr{
+  @include body-font;
+}
+.rev-col-2{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.rev-score{
+  display: flex;
+  background-color: $main-color;
+  @include secondary-font;
+  width: 80px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 80px;
+}
