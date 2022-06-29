@@ -14,6 +14,16 @@ p,
 pre {
   margin: 0;
 }
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 /*** SASS VARIABLES ***/
 @mixin primary-font {
   font-weight: 700;
@@ -30,6 +40,8 @@ pre {
 
   $main-color: #990000;
   $gray-light:#EFEFEF;
+  $dark-gray: #333333;
+  $pad-y: 60px 0;
 /*** GENERAL - Presets  ***/
 body{
     background-color: black;
@@ -43,15 +55,49 @@ h1,h2{
 .wrapper{
   padding: 10px;
 }
-
+/*** Review List ***/
+.rev-lost{
+  padding: $pad-y;
+}
 /*** Review Item ***/
-.review-item{
+.revSection{
+  width: 600px;
+  margin: auto;
+}
+
+.reviewStats{
+  margin: 20px 0;
+  display: flex ;
+}
+.reviewStats > div{
+  flex:1;
+}
+.reviewStats > .revAvrg{
+  text-align: right;
+}
+.card-item{
+  position: relative;
   background-color: white;
   color: black;
   border-radius: 25px;
   margin-top: 20px;
   width: 600px;
   
+}
+.card-item.dark{
+  background-color: $dark-gray;
+  color: white;
+}
+.card-item.dark {
+  background-color: $dark-gray;
+  color: white;
+  .rev-name{
+    color: white;
+  }
+  .rev-score{
+    background-color: white;
+    color: $main-color;
+  }
 }
 .wrapper.rev-content{
   display: flex;
@@ -89,4 +135,14 @@ h1,h2{
   align-items: center;
   justify-content: center;
   border-radius: 80px;
+}
+.revItemBtn{
+    color: $main-color;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: 0.5s ;
+}
+.revItemBtn:hover{
+  transform: rotate(90deg);
 }

@@ -8,7 +8,10 @@ function App() {
                 <>
                         <Header />
                         <div className="container">
-                                <ReviewList />
+                                <div className="revSection">
+                                        <ReviewList />
+                                </div>
+
                         </div>
                 </>
 
